@@ -5,6 +5,7 @@ from django.views.generic import ListView, DetailView
 import typing as tp
 from .forms import FriendForm, FindForm
 from .models import Friend
+from django.views.decorators.cache import never_cache
 
 class FriendList(ListView):
     model = Friend
